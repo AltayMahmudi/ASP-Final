@@ -7,6 +7,6 @@ namespace JotexRepository.Data
 {
     public class JotexDbContext:DbContext
 	{
-		public JotexDbContext(DbContextOptions<JotexDbContext> options) { }
+		public JotexDbContext(DbContextOptions<JotexDbContext> options):base(options) { }
 	}
 }
