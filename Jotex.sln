@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29806.167
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jotex", "Jotex\Jotex.csproj", "{7229902E-EEFA-45E7-B27E-9A8E19F0E76A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JotexRepository", "JotexRepository\JotexRepository.csproj", "{99A5342B-153A-40A4-83D2-570E4AD2E55E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7229902E-EEFA-45E7-B27E-9A8E19F0E76A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7229902E-EEFA-45E7-B27E-9A8E19F0E76A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7229902E-EEFA-45E7-B27E-9A8E19F0E76A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7229902E-EEFA-45E7-B27E-9A8E19F0E76A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{99A5342B-153A-40A4-83D2-570E4AD2E55E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99A5342B-153A-40A4-83D2-570E4AD2E55E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99A5342B-153A-40A4-83D2-570E4AD2E55E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99A5342B-153A-40A4-83D2-570E4AD2E55E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8208CECA-ABA7-4222-9ECA-4281D9BC5093}
+	EndGlobalSection
+EndGlobal

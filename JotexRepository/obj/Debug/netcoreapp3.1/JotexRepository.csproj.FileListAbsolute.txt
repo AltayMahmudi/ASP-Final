@@ -1,0 +1,5 @@
+C:\Users\User\source\repos\Jotex\JotexRepository\bin\Debug\netcoreapp3.1\JotexRepository.deps.json
+C:\Users\User\source\repos\Jotex\JotexRepository\bin\Debug\netcoreapp3.1\JotexRepository.dll
+C:\Users\User\source\repos\Jotex\JotexRepository\obj\Debug\netcoreapp3.1\JotexRepository.csprojAssemblyReference.cache
+C:\Users\User\source\repos\Jotex\JotexRepository\obj\Debug\netcoreapp3.1\JotexRepository.AssemblyInfoInputs.cache
+C:\Users\User\source\repos\Jotex\JotexRepository\obj\Debug\netcoreapp3.1\JotexRepository.AssemblyInfo.cs
