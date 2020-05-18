@@ -21,6 +21,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Views\Services\" />
     <Folder Include="wwwroot\images\slider\" />
   </ItemGroup>
 

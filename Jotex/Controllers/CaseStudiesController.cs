@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Jotex.Controllers
 {
-    public class ProductController : Controller
+    public class CaseStudiesController : Controller
     {
         public IActionResult Index()
         {
