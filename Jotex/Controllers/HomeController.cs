@@ -17,7 +17,19 @@ namespace Jotex.Controllers
 		{
 			return View();
 		}
+		public IActionResult AboutUs()
+		{
+			return View();
+		}
+		public IActionResult Contact()
+		{
+			return View();
+		}
+		public IActionResult FAQ()
+		{
+			return View();
+		}
 
-	
+
 	}
 }

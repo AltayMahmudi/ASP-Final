@@ -8,7 +8,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="author" content="irstheme">
 
-	<title> @ViewData["JotexINS"]</title>
+	<title> @ViewData["index"]</title>
 
 	<link href="~/css/themify-icons.css" rel="stylesheet">
 	<link href="~/css/flaticon.css" rel="stylesheet">
@@ -24,7 +24,7 @@
 	<link href="~/css/jquery.fancybox.css" rel="stylesheet">
 	<link href="~/css/style.css" rel="stylesheet">
 
-	@RenderSection("Head", required:false)
+	@RenderSection("Head", required: false)
 
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 	<!--[if lt IE 9]>
@@ -36,122 +36,108 @@
 
 <body>
 
-	<!-- start page-wrapper -->
-	<div class="page-wrapper">
-
-		<!-- start preloader -->
-		<div class="preloader">
-			<div class="spinner">
-				<div class="double-bounce1"></div>
-				<div class="double-bounce2"></div>
-			</div>
-		</div>
-		<!-- end preloader -->
-		<!-- Start header -->
-		<header id="header" class="site-header header-style-1">
-			<div class="topbar">
-				<div class="container-fluid">
-					<div class="row">
-						<div class="col col-md-8">
-							<div class="info">
+	<header id="header" class="site-header header-style-1">
+		<div class="topbar">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col col-md-8">
+						<div class="info">
+							<ul>
+								<li><i class="ti-location-pin"></i> 22/1 Rokon uddin sorok mistripara, Austr</li>
+								<li><i class="ti-timer"></i> Mon - Sun 9.00am - 5 pm</li>
+							</ul>
+						</div>
+					</div>
+					<div class="col col-md-4">
+						<div class="social-quote clearfix">
+							<div class="social-links">
 								<ul>
-									<li><i class="ti-location-pin"></i> 22/1 Rokon uddin sorok mistripara, Austr</li>
-									<li><i class="ti-timer"></i> Mon - Sun 9.00am - 5 pm</li>
+									<li><a href="#"><i class="ti-facebook"></i></a></li>
+									<li><a href="#"><i class="ti-twitter-alt"></i></a></li>
+									<li><a href="#"><i class="ti-linkedin"></i></a></li>
+									<li><a href="#"><i class="ti-pinterest"></i></a></li>
+									<li><a href="#"><i class="ti-vimeo-alt"></i></a></li>
 								</ul>
 							</div>
-						</div>
-						<div class="col col-md-4">
-							<div class="social-quote clearfix">
-								<div class="social-links">
-									<ul>
-										<li><a href="#"><i class="ti-facebook"></i></a></li>
-										<li><a href="#"><i class="ti-twitter-alt"></i></a></li>
-										<li><a href="#"><i class="ti-linkedin"></i></a></li>
-										<li><a href="#"><i class="ti-pinterest"></i></a></li>
-										<li><a href="#"><i class="ti-vimeo-alt"></i></a></li>
-									</ul>
-								</div>
-								<div class="quote-btn">
-									<a href="#" class="theme-btn-s2">Get a quote <i class="fi flaticon-next"></i></a>
-								</div>
+							<div class="quote-btn">
+								<a href="#" class="theme-btn-s2">Get a quote <i class="fi flaticon-next"></i></a>
 							</div>
 						</div>
 					</div>
 				</div>
-			</div> <!-- end topbar -->
+			</div>
+		</div> <!-- end topbar -->
 
-			<nav class="navigation navbar navbar-default">
-				<div class="separator-bottom"></div>
-				<div class="separator-bottom-2"></div>
-				<div class="container-fluid">
-					<div class="navbar-header">
-						<button type="button" class="open-btn">
-							<span class="sr-only">Toggle navigation</span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-						</button>
-						<a class="navbar-brand" href="index.html"><img src="~/images/logo.png" alt></a>
-					</div>
-					<div id="navbar" class="navbar-collapse collapse navbar-left navigation-holder">
-						<div class="left-separator"></div>
-						<button class="close-navbar"><i class="ti-close"></i></button>
-						<ul class="nav navbar-nav">
-							<li class="menu-item-has-children current-menu-parent">
-								<a href="#">Home</a>
-								<ul class="sub-menu">
-									<li class="current-menu-item"><a href="index.html">Home style 1</a></li>
-									<li><a href="index-2.html">Home style 2</a></li>
-									<li><a href="index-3.html">Home style 3</a></li>
-									<li><a href="index-4.html">Home style 4</a></li>
-								</ul>
-							</li>
-							<li class="menu-item-has-children">
-								<a href="#">Pages</a>
-								<ul class="sub-menu">
-									<li><a href="about.html">About us</a></li>
-									<li><a href="contact.html">Contact us</a></li>
-									<li><a href="awards.html">Awards</a></li>
-									<li><a href="pricing-plan.html">Pricing plan</a></li>
-									<li><a href="testimonials.html">Testimonials</a></li>
-									<li><a href="testimonials-s2.html">Testimonials style 2</a></li>
-									<li><a href="team.html">Team</a></li>
-									<li><a href="faq.html">FAQ</a></li>
-									<li><a href="404.html">404</a></li>
-								</ul>
-							</li>
-							<li class="menu-item-has-children">
-								<a href="#">Services</a>
-								<ul class="sub-menu">
-									<li><a href="services.html">Services</a></li>
-									<li><a href="services-s2.html">Services style 2</a></li>
-									<li><a href="service-single.html">Life insurance</a></li>
-									<li><a href="car-insurance.html">Car insurance</a></li>
-									<li><a href="home-insurance.html">Home insurance</a></li>
-									<li><a href="health-insurance.html">Helth insurance</a></li>
-									<li><a href="investment-plan.html">Investment plan</a></li>
-									<li><a href="life-insurance.html">Life insurance</a></li>
-								</ul>
-							</li>
-							<li class="menu-item-has-children">
-								<a href="#">Case studies</a>
-								<ul class="sub-menu">
-									<li><a href="case-studies.html">Case studies</a></li>
-									<li><a href="case-single.html">Case studies single</a></li>
-								</ul>
-							</li>
-							<li class="menu-item-has-children">
-								<a href="#">Blog</a>
-								<ul class="sub-menu">
-									<li class="menu-item-has-children">
-										<a href="#Level3">Blog listing</a>
-										<ul class="sub-menu">
-											<li><a href="blog.html">Right sidebar</a></li>
-											<li><a href="blog-left-sidebar.html">Left sidebar</a></li>
-											<li><a href="blog-fullwidth.html">Full width</a></li>
-										</ul>
-									</li>
-									<li class="menu-item-has-children">
+		<nav class="navigation navbar navbar-default">
+			<div class="separator-bottom"></div>
+			<div class="separator-bottom-2"></div>
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button type="button" class="open-btn">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="index.html"><img src="~/images/logo.png" alt></a>
+				</div>
+				<div id="navbar" class="navbar-collapse collapse navbar-left navigation-holder">
+					<div class="left-separator"></div>
+					<button class="close-navbar"><i class="ti-close"></i></button>
+					<ul class="nav navbar-nav">
+						<li class="menu-item-has-children current-menu-parent">
+							<a href="#">Home</a>
+							<ul class="sub-menu">
+								<li class="current-menu-item"><a href="index.html">Home style 1</a></li>
+								<li><a href="index-2.html">Home style 2</a></li>
+								<li><a href="index-3.html">Home style 3</a></li>
+								<li><a href="index-4.html">Home style 4</a></li>
+							</ul>
+						</li>
+						<li class="menu-item-has-children">
+							<a href="#">Pages</a>
+							<ul class="sub-menu">
+								<li><a asp-controller="Home" asp-action="AboutUs">About us</a></li>
+								<li><a asp-controller="Home" asp-action="Contact">Contact us</a></li>
+								<li><a href="awards.html">Awards</a></li>
+								<li><a href="pricing-plan.html">Pricing plan</a></li>
+								<li><a href="testimonials.html">Testimonials</a></li>
+								<li><a href="testimonials-s2.html">Testimonials style 2</a></li>
+								<li><a href="team.html">Team</a></li>
+								<li><a asp-controller="Home" asp-action="FAQ">FAQ</a></li>
+								<li><a href="404.html">404</a></li>
+							</ul>
+						</li>
+						<li class="menu-item-has-children">
+							<a href="#">Services</a>
+							<ul class="sub-menu">
+								<li><a href="services.html">Services</a></li>
+								<li><a href="services-s2.html">Services style 2</a></li>
+								<li><a href="service-single.html">Life insurance</a></li>
+								<li><a href="car-insurance.html">Car insurance</a></li>
+								<li><a href="home-insurance.html">Home insurance</a></li>
+								<li><a href="health-insurance.html">Helth insurance</a></li>
+								<li><a href="investment-plan.html">Investment plan</a></li>
+								<li><a href="life-insurance.html">Life insurance</a></li>
+							</ul>
+						</li>
+						<li class="menu-item-has-children">
+							<a href="#">Case studies</a>
+							<ul class="sub-menu">
+								<li><a asp-controller="CaseStudies" asp-action="CaseStudies">Case studies</a></li>
+								<li><a asp-controller="CaseStudies" asp-action="CaseStudiesSingle">Case studies single</a></li>
+							</ul>
+						</li>
+						<li class="menu-item-has-children">
+							<a asp-controller="Blog" asp-action="Blog">Blog</a>
+							<ul class="sub-menu">
+								<li class="menu-item-has-children">
+									<a href="#Level3">Blog listing</a>
+									<ul class="sub-menu">
+										<li><a asp-controller="Blog" asp-action="BlogFullWidth">Full width</a></li>
+									</ul>
+								</li>
+								@*<li class="menu-item-has-children">
 										<a href="#Level3">Blog grid</a>
 										<ul class="sub-menu">
 											<li><a href="blog-grid-2-columns.html">2 columns</a></li>
@@ -176,41 +162,54 @@
 											<li><a href="blog-single-left-sidebar.html">Left sidebar</a></li>
 											<li><a href="blog-single-full-width.html">Full width</a></li>
 										</ul>
-									</li>
-								</ul>
-							</li>
-							<li><a href="contact.html">Contact</a></li>
-						</ul>
-					</div><!-- end of nav-collapse -->
+									</li>*@
+							</ul>
+						</li>
+						<li><a href="contact.html">Contact</a></li>
+					</ul>
+				</div><!-- end of nav-collapse -->
 
-					<div class="search-contact">
-						<div class="contact">
-							<a href="#">
-								<i class="fi flaticon-feedback"></i>
-								<h5>Have any query?</h5>
-								<span>++8891682000000</span>
-							</a>
+				<div class="search-contact">
+					<div class="contact">
+						<a href="#">
+							<i class="fi flaticon-feedback"></i>
+							<h5>Have any query?</h5>
+							<span>++8891682000000</span>
+						</a>
+					</div>
+					<div class="header-search-area">
+						<div class="header-search-form">
+							<form class="form">
+								<div>
+									<input type="text" class="form-control" placeholder="Search here">
+								</div>
+								<button type="submit" class="btn"><i class="ti-search"></i></button>
+							</form>
 						</div>
-						<div class="header-search-area">
-							<div class="header-search-form">
-								<form class="form">
-									<div>
-										<input type="text" class="form-control" placeholder="Search here">
-									</div>
-									<button type="submit" class="btn"><i class="ti-search"></i></button>
-								</form>
-							</div>
-							<div>
-								<button class="btn open-btn"><i class="ti-search"></i> <span>Search</span></button>
-							</div>
+						<div>
+							<button class="btn open-btn"><i class="ti-search"></i> <span>Search</span></button>
 						</div>
 					</div>
+				</div>
 
-				</div><!-- end of container -->
-			</nav>
-		</header>
-		<!-- end of header -->
-	@RenderBody()
+			</div><!-- end of container -->
+		</nav>
+	</header>
+	<!-- end of header -->
+	<!-- start page-wrapper -->
+	<div class="page-wrapper">
+
+		<!-- start preloader -->
+		<div class="preloader">
+			<div class="spinner">
+				<div class="double-bounce1"></div>
+				<div class="double-bounce2"></div>
+			</div>
+		</div>
+		<!-- end preloader -->
+		<!-- Start header -->
+
+		@RenderBody()
 		<!-- start site-footer -->
 		<footer class="site-footer">
 			<div class="newsletter-area">
@@ -336,7 +335,7 @@
 	<!-- Plugins for this template -->
 	<script src="~/js/jquery-plugin-collection.js"></script>
 
-	@RenderSection("Scripts")
+	@RenderSection("Scripts", false)
 	<!-- Custom script for this template -->
 	<script src="~/js/script.js"></script>
 </body>

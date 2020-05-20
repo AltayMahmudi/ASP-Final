@@ -4,9 +4,8 @@ using System.Text;
 
 namespace JotexRepository.Models
 {
-public	class Companies
+	public class Subscription:BaseEntity
 	{
-		public int Id { get; set; }
-		public string Name { get; set; }
+		public string Email { get; set; }
 	}
 }

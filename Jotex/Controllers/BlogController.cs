@@ -6,18 +6,23 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Jotex.Controllers
 {
-    public class CaseStudiesController : Controller
+    public class BlogController : Controller
     {
         public IActionResult Index()
         {
             return View();
         }
 
-        public IActionResult CaseStudies()
+        public IActionResult Blog()
         {
             return View();
         }
-        public IActionResult CaseStudiesSingle()
+        public IActionResult BlogFullWidth()
+        {
+            return View();
+        }
+
+        public IActionResult BlogSingle()
         {
             return View();
         }
