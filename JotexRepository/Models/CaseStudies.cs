@@ -28,14 +28,9 @@ namespace JotexRepository.Models
 		[Required]
 		public string Location { get; set; }
 	
-		public Category Category { get; set; }
 	
-		public TAG TAG { get; set; }
 	
-		public CaseTabs CaseTab { get; set; }
-
-		public MultiCase multiCase { get; set; }
-
+	
 
 
 	}

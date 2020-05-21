@@ -7,7 +7,7 @@ namespace JotexRepository.Models
 	public class Service:BaseEntity
 	{
 		public int ServiceId { get; set; }
-		public string Title { get; set; }
+		public string Name { get; set; }
 
 		public string Details { get; set; }
 
@@ -20,6 +20,10 @@ namespace JotexRepository.Models
 		public string Image { get; set; }
 
 		public string DownloadDocument { get; set; }
+
+		public bool Status { get; set; }
+
+		ICollection<Category> categories { get; set; }
 
 		ICollection<ServiceFeature> ServiceFeature { get; set; }
 

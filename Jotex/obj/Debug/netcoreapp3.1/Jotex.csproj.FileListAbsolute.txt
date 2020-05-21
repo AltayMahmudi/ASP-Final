@@ -137,7 +137,6 @@ C:\Users\User\source\repos\Jotex\Jotex\bin\Debug\netcoreapp3.1\ru\Microsoft.Code
 C:\Users\User\source\repos\Jotex\Jotex\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\User\source\repos\Jotex\Jotex\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\User\source\repos\Jotex\Jotex\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
-C:\Users\User\source\repos\Jotex\Jotex\obj\Debug\netcoreapp3.1\Jotex.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\User\source\repos\Jotex\Jotex\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Page\Title.cshtml.g.cs
 C:\Users\User\source\repos\Jotex\Jotex\obj\Debug\netcoreapp3.1\Razor\Views\Home\AboutUs.cshtml.g.cs
 C:\Users\User\source\repos\Jotex\Jotex\obj\Debug\netcoreapp3.1\Razor\Views\Home\FAQ.cshtml.g.cs
@@ -146,3 +145,7 @@ C:\Users\User\source\repos\Jotex\Jotex\obj\Debug\netcoreapp3.1\Razor\Views\Blog\
 C:\Users\User\source\repos\Jotex\Jotex\obj\Debug\netcoreapp3.1\Razor\Views\CaseStudies\CaseStudies.cshtml.g.cs
 C:\Users\User\source\repos\Jotex\Jotex\obj\Debug\netcoreapp3.1\Razor\Views\Blog\BlogFullWidth.cshtml.g.cs
 C:\Users\User\source\repos\Jotex\Jotex\obj\Debug\netcoreapp3.1\Razor\Views\CaseStudies\CaseStudiesSingle.cshtml.g.cs
+C:\Users\User\source\repos\Jotex\Jotex\bin\Debug\netcoreapp3.1\AutoMapper.dll
+C:\Users\User\source\repos\Jotex\Jotex\bin\Debug\netcoreapp3.1\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\User\source\repos\Jotex\Jotex\obj\Debug\netcoreapp3.1\Jotex.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\User\source\repos\Jotex\Jotex\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Components\Menu\Default.cshtml.g.cs

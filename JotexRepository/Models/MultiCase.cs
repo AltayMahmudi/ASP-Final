@@ -6,6 +6,7 @@ namespace JotexRepository.Models
 {
 	public class MultiCase
 	{
+		public int Id { get; set; }
 		public int CaseId { get; set; }
 		public string MultiCaseTitle { get; set; }
 		public string MultiCaseSecondary { get; set; }

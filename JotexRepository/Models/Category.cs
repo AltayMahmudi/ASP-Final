@@ -6,8 +6,12 @@ namespace JotexRepository.Models
 {
 	public class Category:BaseEntity
 	{
-		public int CategoryId { get; set; }
+		public int ServiceId { get; set; }
 
 		public int CategoryTitle { get; set; }
+
+		public Service service { get; set; }
+
+
 	}
 }
