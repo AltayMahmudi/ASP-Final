@@ -33,7 +33,7 @@ namespace Jotex
 
 			services.AddDbContext<JotexDbContext>(options =>
 				   options.UseSqlServer(Configuration.GetConnectionString("Default"),
-				   x => x.MigrationsAssembly("Repository")));
+				   x => x.MigrationsAssembly("JotexRepository")));
 
 			services.AddTransient<IServiceRepository, ServiceRepository>();
 		}

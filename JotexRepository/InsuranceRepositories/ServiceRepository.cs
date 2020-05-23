@@ -18,7 +18,7 @@ namespace JotexRepository.InsuranceRepositories
 		}
 		public IEnumerable<Service> GetServicesWithCategory()
 		{
-			return _context.services.Include("Category").Where(d => d.Status).ToList();
+			return _context.services.Include("category").Where(d => d.Status).ToList();
 		}
 	}
 }
