@@ -9,11 +9,11 @@ namespace JotexRepository.Models
 	{
 		public int ServiceId { get; set; }
 
-		[Required]
-		public decimal PriceMin { get; set; }
+		//[Required]
+		//public decimal PriceMin { get; set; }
 
-		[Required]
-		public decimal PriceMax { get; set; }
+		//[Required]
+		//public decimal PriceMax { get; set; }
 
 		[Required]
 		public int GracePeriod { get; set; }
