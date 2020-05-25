@@ -12,5 +12,8 @@ namespace JotexRepository.Models
 
 		public string AuthorTitle { get; set; }
 
+		public bool Status { get; set; }
+
+
 	}
 }

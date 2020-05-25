@@ -19,21 +19,46 @@ namespace JotexRepository.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("JotexRepository.Models.BaseEntity", b =>
+            modelBuilder.Entity("JotexRepository.Models.CaseStudies", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<int>("CaseId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("CaseText")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("CaseTextBold")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("CaseTitle")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Caseİmage")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ClientName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("CreatedBy")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Discriminator")
+                    b.Property<DateTime>("Date")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Location")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -41,14 +66,53 @@ namespace JotexRepository.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("ModifiedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Time")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
-                    b.ToTable("baseEntities");
+                    b.ToTable("CaseStudies");
+                });
 
-                    b.HasDiscriminator<string>("Discriminator").HasValue("BaseEntity");
+            modelBuilder.Entity("JotexRepository.Models.CaseTabs", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("CaseTabText")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("CaseTabTitle")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("CaseTabsId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("CreatedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("ModifiedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("ModifiedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("caseStudiesId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("caseStudiesId");
+
+                    b.ToTable("CaseTabs");
                 });
 
             modelBuilder.Entity("JotexRepository.Models.MultiCase", b =>
@@ -77,84 +141,15 @@ namespace JotexRepository.Migrations
 
                     b.HasIndex("caseStudiesId");
 
-                    b.ToTable("multiCases");
-                });
-
-            modelBuilder.Entity("JotexRepository.Models.CaseStudies", b =>
-                {
-                    b.HasBaseType("JotexRepository.Models.BaseEntity");
-
-                    b.Property<int>("CaseId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("CaseText")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("CaseTextBold")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("CaseTitle")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Caseİmage")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("ClientName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime>("Date")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("Location")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Time")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasDiscriminator().HasValue("CaseStudies");
-                });
-
-            modelBuilder.Entity("JotexRepository.Models.CaseTabs", b =>
-                {
-                    b.HasBaseType("JotexRepository.Models.BaseEntity");
-
-                    b.Property<string>("CaseTabText")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("CaseTabTitle")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("CaseTabsId")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("caseStudiesId")
-                        .HasColumnType("int");
-
-                    b.HasIndex("caseStudiesId");
-
-                    b.HasDiscriminator().HasValue("CaseTabs");
-                });
-
-            modelBuilder.Entity("JotexRepository.Models.Category", b =>
-                {
-                    b.HasBaseType("JotexRepository.Models.BaseEntity");
-
-                    b.Property<int>("CategoryTitle")
-                        .HasColumnType("int");
-
-                    b.HasDiscriminator().HasValue("Category");
+                    b.ToTable("MultiCases");
                 });
 
             modelBuilder.Entity("JotexRepository.Models.Service", b =>
                 {
-                    b.HasBaseType("JotexRepository.Models.BaseEntity");
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("BottomInfo")
                         .HasColumnType("nvarchar(max)");
@@ -162,8 +157,11 @@ namespace JotexRepository.Migrations
                     b.Property<string>("BottomTitle")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("CategoryId")
-                        .HasColumnType("int");
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("CreatedBy")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Details")
                         .HasColumnType("nvarchar(max)");
@@ -172,6 +170,12 @@ namespace JotexRepository.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Image")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("ModifiedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("ModifiedBy")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Name")
@@ -183,16 +187,23 @@ namespace JotexRepository.Migrations
                     b.Property<bool>("Status")
                         .HasColumnType("bit");
 
-                    b.HasIndex("CategoryId")
-                        .IsUnique()
-                        .HasFilter("[CategoryId] IS NOT NULL");
+                    b.HasKey("Id");
 
-                    b.HasDiscriminator().HasValue("Service");
+                    b.ToTable("Services");
                 });
 
             modelBuilder.Entity("JotexRepository.Models.ServiceDetail", b =>
                 {
-                    b.HasBaseType("JotexRepository.Models.BaseEntity");
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("CreatedBy")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("GracePeriod")
                         .HasColumnType("int");
@@ -200,22 +211,45 @@ namespace JotexRepository.Migrations
                     b.Property<bool>("IsPolicyModificationOnline")
                         .HasColumnType("bit");
 
+                    b.Property<DateTime>("ModifiedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("ModifiedBy")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<int>("ServiceId")
                         .HasColumnType("int");
 
                     b.Property<int>("SupportHour")
                         .HasColumnType("int");
 
+                    b.HasKey("Id");
+
                     b.HasIndex("ServiceId");
 
-                    b.HasDiscriminator().HasValue("ServiceDetail");
+                    b.ToTable("ServiceDetails");
                 });
 
             modelBuilder.Entity("JotexRepository.Models.ServiceFeature", b =>
                 {
-                    b.HasBaseType("JotexRepository.Models.BaseEntity");
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("CreatedBy")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Icon")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("ModifiedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("ModifiedBy")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Subtitle")
@@ -224,25 +258,59 @@ namespace JotexRepository.Migrations
                     b.Property<string>("Title")
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasDiscriminator().HasValue("ServiceFeature");
+                    b.HasKey("Id");
+
+                    b.ToTable("ServiceFeatures");
                 });
 
             modelBuilder.Entity("JotexRepository.Models.Subscription", b =>
                 {
-                    b.HasBaseType("JotexRepository.Models.BaseEntity");
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("CreatedBy")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Email")
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasDiscriminator().HasValue("Subscription");
+                    b.Property<DateTime>("ModifiedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("ModifiedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Subscriptions");
                 });
 
             modelBuilder.Entity("JotexRepository.Models.TAG", b =>
                 {
-                    b.HasBaseType("JotexRepository.Models.BaseEntity");
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<int?>("CaseStudiesId")
                         .HasColumnType("int");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("CreatedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("ModifiedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("ModifiedBy")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("TagId")
                         .HasColumnType("int");
@@ -250,19 +318,36 @@ namespace JotexRepository.Migrations
                     b.Property<int>("TagName")
                         .HasColumnType("int");
 
+                    b.HasKey("Id");
+
                     b.HasIndex("CaseStudiesId");
 
-                    b.HasDiscriminator().HasValue("TAG");
+                    b.ToTable("TAGs");
                 });
 
             modelBuilder.Entity("JotexRepository.Models.Testimonial", b =>
                 {
-                    b.HasBaseType("JotexRepository.Models.BaseEntity");
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("Author")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("AuthorTitle")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("CreatedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("ModifiedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("ModifiedBy")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Review")
@@ -271,14 +356,9 @@ namespace JotexRepository.Migrations
                     b.Property<int>("Testimonalİd")
                         .HasColumnType("int");
 
-                    b.HasDiscriminator().HasValue("Testimonial");
-                });
+                    b.HasKey("Id");
 
-            modelBuilder.Entity("JotexRepository.Models.MultiCase", b =>
-                {
-                    b.HasOne("JotexRepository.Models.CaseStudies", "caseStudies")
-                        .WithMany()
-                        .HasForeignKey("caseStudiesId");
+                    b.ToTable("Testimonials");
                 });
 
             modelBuilder.Entity("JotexRepository.Models.CaseTabs", b =>
@@ -288,13 +368,11 @@ namespace JotexRepository.Migrations
                         .HasForeignKey("caseStudiesId");
                 });
 
-            modelBuilder.Entity("JotexRepository.Models.Service", b =>
+            modelBuilder.Entity("JotexRepository.Models.MultiCase", b =>
                 {
-                    b.HasOne("JotexRepository.Models.Category", "category")
-                        .WithOne("service")
-                        .HasForeignKey("JotexRepository.Models.Service", "CategoryId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                    b.HasOne("JotexRepository.Models.CaseStudies", "caseStudies")
+                        .WithMany()
+                        .HasForeignKey("caseStudiesId");
                 });
 
             modelBuilder.Entity("JotexRepository.Models.ServiceDetail", b =>

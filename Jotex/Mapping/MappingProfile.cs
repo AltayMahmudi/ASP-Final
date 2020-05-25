@@ -12,9 +12,10 @@ namespace Jotex.Mapping
 	{
 		public MappingProfile() 
 		{
-		CreateMap<Category,CategoryViewModel>();
+
 
 			CreateMap<Service, ServiceViewModel>();
+
 		}
 	}
 }

@@ -11,6 +11,7 @@ namespace JotexRepository.Models
 		public string Subtitle { get; set; }
 
 		public string Icon { get; set; }
+	
 
 		ICollection<Service> services { get; set; }
 

@@ -10,17 +10,21 @@ namespace JotexRepository.Data
 	{
 		public JotexDbContext(DbContextOptions<JotexDbContext> options):base(options) { }
 
-		    public DbSet<Service>services  { get; set; }
-	        public DbSet<Category>categories  { get; set; }
-            public DbSet<BaseEntity>baseEntities  { get; set; }
-			public DbSet<ServiceDetail>serviceDetails  { get; set; }
+
+		//public DbSet<BaseEntity> BaseEntities { get; set; }
+		    public DbSet<Service>Services  { get; set; }
+			public DbSet<ServiceDetail>ServiceDetails  { get; set; }
 			public DbSet<ServiceFeature>ServiceFeatures  { get; set; }
-			public DbSet<TAG>TAGs  { get; set; }
-			public DbSet<Subscription>subscriptions  { get; set; }
-			public DbSet<CaseStudies>caseStudies  { get; set; }
-			public DbSet<CaseTabs>caseTabs  { get; set; }
-		    public DbSet<MultiCase>multiCases  { get; set; }
-	        public DbSet<Testimonial>testimonials  { get; set; }
+			public DbSet<Tag>Tags  { get; set; }
+		public DbSet<Blog> Blogs { get; set; }
+
+
+
+		public DbSet<Subscription>Subscriptions  { get; set; }
+			public DbSet<CaseStudies>CaseStudies  { get; set; }
+			public DbSet<CaseTabs>CaseTabs  { get; set; }
+		    public DbSet<MultiCase>MultiCases  { get; set; }
+	        public DbSet<Testimonial>Testimonials  { get; set; }
 
 
 

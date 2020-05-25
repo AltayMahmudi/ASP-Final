@@ -9,7 +9,6 @@ namespace JotexRepository.Models
 		public string Name { get; set; }
 
 		public string Details { get; set; }
-		public int CategoryId { get; set; }
 
 		public string SecondaryDetail { get; set; }
 
@@ -22,7 +21,7 @@ namespace JotexRepository.Models
 		public string DownloadDocument { get; set; }
 
 		public bool Status { get; set; }
-		public Category category { get; set; }
+
 
 
 		ICollection<ServiceFeature> ServiceFeature { get; set; }

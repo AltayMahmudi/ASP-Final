@@ -1,4 +1,5 @@
-﻿<nav class="navigation navbar navbar-default">
+﻿@model  IEnumerable<ServiceViewModel>
+<nav class="navigation navbar navbar-default">
     <div class="separator-bottom"></div>
     <div class="separator-bottom-2"></div>
     <div class="container-fluid">
@@ -41,14 +42,18 @@
                 <li class="menu-item-has-children">
                     <a href="#">Services</a>
                     <ul class="sub-menu">
-                        <li><a href="services.html">Services</a></li>
-                        <li><a href="services-s2.html">Services style 2</a></li>
-                        <li><a href="service-single.html">Life insurance</a></li>
-                        <li><a href="car-insurance.html">Car insurance</a></li>
-                        <li><a href="home-insurance.html">Home insurance</a></li>
-                        <li><a href="health-insurance.html">Helth insurance</a></li>
-                        <li><a href="investment-plan.html">Investment plan</a></li>
-                        <li><a href="life-insurance.html">Life insurance</a></li>
+                        @foreach (var service in Model)
+                                        {
+                            <li><a href="services.html">@service.Name</a></li>
+                            @*<li><a href="services-s2.html">Services style 2</a></li>
+                            <li><a href="service-single.html">Life insurance</a></li>
+                            <li><a href="car-insurance.html">Car insurance</a></li>
+                            <li><a href="home-insurance.html">Home insurance</a></li>
+                            <li><a href="health-insurance.html">Helth insurance</a></li>
+                            <li><a href="investment-plan.html">Investment plan</a></li>
+                            <li><a href="life-insurance.html">Life insurance</a></li>**@
+                        }
+
                     </ul>
                 </li>
                 <li class="menu-item-has-children">

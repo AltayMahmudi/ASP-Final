@@ -27,10 +27,11 @@ namespace JotexRepository.Models
 		public string Time { get; set; }
 		[Required]
 		public string Location { get; set; }
-	
-	
-	
-	
+
+		public bool Status { get; set; }
+
+
+
 
 
 	}

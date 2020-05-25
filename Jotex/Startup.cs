@@ -35,7 +35,7 @@ namespace Jotex
 				   options.UseSqlServer(Configuration.GetConnectionString("Default"),
 				   x => x.MigrationsAssembly("JotexRepository")));
 
-			services.AddTransient<IServiceRepository, ServiceRepository>();
+			services.AddTransient<ITestimonialRepository, TestimonialRepository>();
 		}
 
 		// This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

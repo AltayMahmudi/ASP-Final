@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using Jotex.Models;
 using JotexRepository.InsuranceRepositories;
+using JotexRepository.TestimonialRepositories;
 using JotexRepository.Models;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -13,18 +14,19 @@ namespace Jotex.ViewComponents
 	public class MenuViewComponent:ViewComponent
 	{
 		private readonly IMapper _mapper;
-		private readonly IServiceRepository _serviceRepository;
-		public MenuViewComponent(IMapper mapper, IServiceRepository serviceRepository)
+		private readonly ServiceRepository _serviceRepository;
+		public MenuViewComponent(IMapper mapper, ServiceRepository serviceRepository)
 		{
 			_mapper = mapper;
 			_serviceRepository = serviceRepository;
 		}
 		public IViewComponentResult Invoke() 
 		{
-			var services = _serviceRepository.GetServicesWithCategory();
+			var services = _serviceRepository.GetServices();
 
 			var model = _mapper.Map<IEnumerable<Service>,IEnumerable<ServiceViewModel>>(services);
-			return View();
+			return View(model);
+
 		}
 	}
 }
