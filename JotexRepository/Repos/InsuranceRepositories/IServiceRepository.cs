@@ -7,6 +7,6 @@ namespace JotexRepository.InsuranceRepositories
 {
 	public interface IServiceRepository
 	{
-		IEnumerable<Service> GetServices();
+		Service GetServicesById(int id);
 	}
 }

@@ -16,9 +16,11 @@ namespace JotexRepository.InsuranceRepositories
 		{
 			_context = context;
 		}
-		public IEnumerable<Service> GetServices()
+		public Service GetServicesById(int id)
 		{
-			return _context.Services.Where(d => d.Status).ToList();
+			//return _context.Services.Where(d => d.Status).ToList();
+			return _context.Services.FirstOrDefault(S=>S.Id==id);
+
 		}
 	}
 }

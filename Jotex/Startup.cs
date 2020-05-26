@@ -12,6 +12,11 @@ using AutoMapper;
 using JotexRepository.InsuranceRepositories;
 using JotexRepository.Data;
 using Microsoft.EntityFrameworkCore;
+using JotexRepository.TestimonialRepositories;
+using JotexRepository.Repos.SubscriptionRepositories;
+using JotexRepository.Repos.TagRepositories;
+using JotexRepository.Repos.CaseStudiesRepositories;
+using JotexRepository.Repos.Blogs;
 
 namespace Jotex
 {
@@ -36,6 +41,15 @@ namespace Jotex
 				   x => x.MigrationsAssembly("JotexRepository")));
 
 			services.AddTransient<ITestimonialRepository, TestimonialRepository>();
+			services.AddTransient<IServiceRepository, ServiceRepository>();
+			services.AddTransient<ISubscriptionRepository, SubscriptionRepository>();
+			services.AddTransient<ITagRepository, TagRepository>();
+			services.AddTransient<ICaseStudiesRepository, CaseStudiesRepository>();
+			services.AddTransient<IBlogRepository, BlogRepository>();
+
+
+
+
 		}
 
 		// This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
